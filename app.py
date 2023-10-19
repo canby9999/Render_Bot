@@ -76,8 +76,8 @@ def listYFsymbol():
     history = "<List>\r"
     for symbol in yfList:
         stock = yf.Ticker(symbol)        
-        data = stock.history(period="1d")
-        history += symbol + ":" + data.to_string() + "\r"
+        data = stock.history(period="1d")["Close"].iloc[0]
+        history += symbol + ":" + data.to_string() +  "\r"
     return history
 
 def drawStraws():
