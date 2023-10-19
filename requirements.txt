@@ -1,1 +1,4 @@
-$ python3 app.py
+line-bot-sdk
+flask
+openai
+gunicorn
